@@ -1,8 +1,8 @@
-# DotNet AI/ML Evaluator
+#  LLM Prompt Evaluator DotNet
 
 ## Overview
 
-DotNet AI/ML Prompt Evaluator is a library written in C# for the .NET platform that facilitates the evaluation, testing, and validation of applications and systems using Large Language Models (LLMs). The library is designed to seamlessly integrate with various testing frameworks and pipelines, making it an ideal choice for incorporating AI/ML evaluations into your development and deployment workflows.
+AI/ML LLM Prompt Evaluator DotNet is a library written in C# for the .NET platform that facilitates the evaluation, testing, and validation of applications and systems using Large Language Models (LLMs). The library is designed to seamlessly integrate with various testing frameworks and pipelines, making it an ideal choice for incorporating AI/ML evaluations into your development and deployment workflows.
 
 ## Features
 
