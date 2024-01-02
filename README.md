@@ -16,6 +16,8 @@ DotNet AI/ML Prompt Evaluator is a library written in C# for the .NET platform t
 
 - **Observability with System.Diagnostics.Metrics**: DotNet AI/ML Evaluator leverages the System.Diagnostics.Metrics APIs for observability of metrics and traces in .NET applications. This allows users to instrument their applications, track important metrics, and gain insights into the performance and behavior of their AI/ML systems.
 
+- **Integration with OpenTelemetry for Observability**: DotNet AI/ML Evaluator seamlessly integrates with OpenTelemetry, a set of APIs, libraries, agents, instrumentation to provide observability in your applications. This enables exporting metrics, traces, and logs to various backends such as Grafana, Prometheus, and more. Users can easily create dashboards and gain comprehensive insights into the behavior and performance of their AI/ML systems.
+
 ## Why DotNet AI/ML Evaluator?
 
 - **Increased Awareness in the .NET Ecosystem**: By choosing DotNet AI/ML Evaluator, you contribute to the growth of tools and awareness within the .NET C# ecosystem for AI/ML systems. This helps in building a vibrant and diverse set of tools and resources for developers working with LLMs.
