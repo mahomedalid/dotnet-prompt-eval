@@ -25,14 +25,20 @@ DotNet AI/ML Prompt Evaluator is a library written in C# for the .NET platform t
 1. **Installation**: Include the DotNet AI/ML Evaluator library in your .NET project using NuGet package manager.
 
    ```bash
-   dotnet add package <TBD>
+   dotnet add package Mapache.PromptEvalDotNet
    ```
 
 2. **Usage**: Incorporate the library into your testing scenarios, whether using xUnit, polyglot environments, or batch processing.
 
    ```csharp
    // Sample code for using DotNet AI/ML Evaluator
-   <TBD>
+   var kernelBuilder = Kernel.CreateBuilder();
+
+   kernelBuilder.AddAzureOpenAIChatCompletion(config["AZURE_OPENAI_MODEL"]!, config["AZURE_OPENAI_ENDPOINT"]!, config["AZURE_OPENAI_KEY"]!);
+   
+   var evalFactory = new Mapache.PromptEvalDotNet.EvaluatorFactory("MyProjectEvals", builder.Build());
+
+   var coherence = await evalFactory.Coherence("blog-posts").GetScore(prompt, answer);
    ```
 
 3. **Integration with xUnit**:
