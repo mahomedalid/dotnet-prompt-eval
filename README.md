@@ -14,6 +14,8 @@ DotNet AI/ML Prompt Evaluator is a library written in C# for the .NET platform t
 
 - **Responsible AI Practices**: DotNet AI/ML Evaluator is committed to promoting Responsible AI practices. It encourages users to consider ethical implications, fairness, transparency, and accountability in the development and deployment of AI/ML systems.
 
+- **Observability with System.Diagnostics.Metrics**: DotNet AI/ML Evaluator leverages the System.Diagnostics.Metrics APIs for observability of metrics and traces in .NET applications. This allows users to instrument their applications, track important metrics, and gain insights into the performance and behavior of their AI/ML systems.
+
 ## Why DotNet AI/ML Evaluator?
 
 - **Increased Awareness in the .NET Ecosystem**: By choosing DotNet AI/ML Evaluator, you contribute to the growth of tools and awareness within the .NET C# ecosystem for AI/ML systems. This helps in building a vibrant and diverse set of tools and resources for developers working with LLMs.
