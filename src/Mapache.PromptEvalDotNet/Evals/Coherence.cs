@@ -4,23 +4,23 @@ using OpenTelemetry.Metrics;
 using System.Diagnostics.Metrics;
 using System.Threading;
 
-namespace Mapache.PromptEvalDotNet
+namespace Mapache.PromptEvalDotNet.Evals
 {
-    public class CoherenceEvaluator
+    public class Coherence
     {
         private readonly Counter<int> _counter;
         private readonly Histogram<int> _histogram;
-        
+
         private readonly KernelPlugin _prompts;
         private readonly Kernel _kernel;
 
-        public CoherenceEvaluator(KernelPlugin prompts, Kernel kernel, Counter<int> counter, Histogram<int> histogram, string? promptId = null)
+        public Coherence(KernelPlugin prompts, Kernel kernel, Counter<int> counter, Histogram<int> histogram, string? promptId = null)
         {
-            this._counter = counter;
-            this._histogram = histogram;
+            _counter = counter;
+            _histogram = histogram;
 
-            this._kernel = kernel;
-            this._prompts = prompts;
+            _kernel = kernel;
+            _prompts = prompts;
         }
 
         public async Task<int> GetScore(string question, string answer)

@@ -4,17 +4,17 @@ using OpenTelemetry.Metrics;
 using System.Diagnostics.Metrics;
 using System.Threading;
 
-namespace Mapache.PromptEvalDotNet
+namespace Mapache.PromptEvalDotNet.Evals
 {
-    public class RelevanceEvaluator
+    public class Relevance
     {
         private readonly Counter<int> _counter;
         private readonly Histogram<int> _histogram;
-        
+
         private readonly KernelPlugin _prompts;
         private readonly Kernel _kernel;
 
-        public RelevanceEvaluator(KernelPlugin _prompts, Kernel _kernel, Counter<int> _counter, Histogram<int> _histogram, string? promptId = null)
+        public Relevance(KernelPlugin _prompts, Kernel _kernel, Counter<int> _counter, Histogram<int> _histogram, string? promptId = null)
         {
             this._counter = _counter;
             this._histogram = _histogram;
