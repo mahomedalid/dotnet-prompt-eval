@@ -1,3 +1,11 @@
+using Microsoft.Extensions.Configuration;
+using Microsoft.SemanticKernel;
+using OpenTelemetry;
+using OpenTelemetry.Metrics;
+using OpenTelemetry.Trace;
+using System.Diagnostics.Metrics;
+using System.Text;
+
 namespace batcheval.Core;
 
 internal class PromptScoreEval : IEvaluator<int>

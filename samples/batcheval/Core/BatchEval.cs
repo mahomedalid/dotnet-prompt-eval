@@ -1,3 +1,11 @@
+using Microsoft.Extensions.Configuration;
+using Microsoft.SemanticKernel;
+using OpenTelemetry;
+using OpenTelemetry.Metrics;
+using OpenTelemetry.Trace;
+using System.Diagnostics.Metrics;
+using System.Text;
+
 namespace batcheval.Core;
 
 internal class BatchEval<T>
@@ -92,6 +100,10 @@ internal class BatchEval<T>
                 new ExplicitBucketHistogramConfiguration { Boundaries = new double[] { 1, 2, 3, 4, 5 } });
         }
 
+        builder.AddOtlpExporter(otlpOptions =>
+                {
+                    otlpOptions.Endpoint = new Uri("http://localhost:4317");
+                });
         builder.AddConsoleExporter()
                .Build();
 

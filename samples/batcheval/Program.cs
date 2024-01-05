@@ -1,4 +1,13 @@
-﻿namespace batcheval;
+﻿using batcheval.Core;
+using Microsoft.Extensions.Configuration;
+using Microsoft.SemanticKernel;
+using OpenTelemetry;
+using OpenTelemetry.Metrics;
+using OpenTelemetry.Trace;
+using System.Diagnostics.Metrics;
+using System.Text;
+
+namespace batcheval;
 
 class Program
 {
@@ -7,7 +16,7 @@ class Program
         return new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-            .AddEnvironmentVariables()
+            //.AddEnvironmentVariables()
             .Build();
     }
 
@@ -41,7 +50,7 @@ class Program
             .AddEvaluator(new LenghtEval());
 
         await batchEval
-            .WithInputProcessor(new UserStoryCreator(kernel))
+            .WithInputProcessor(new OkrGenerator(kernel))
             .WithJsonl(fileName)
             .Run();
 
