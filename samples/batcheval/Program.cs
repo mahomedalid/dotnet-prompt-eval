@@ -33,9 +33,11 @@ class Program
 
     static async Task Main()
     {
+        // STEP 1: load the confuguration
         var config = GetConfiguration();
         var kernel = CreateAndConfigureKernel(config);
 
+        // STEP 2: load the file
         var fileName = "assets/data.jsonl";
 
         Console.WriteLine($"Reading {fileName}, press a key to continue ...");
@@ -50,7 +52,7 @@ class Program
             .AddEvaluator(new LenghtEval());
 
         await batchEval
-            .WithInputProcessor(new OkrGenerator(kernel))
+            .WithInputProcessor(new OkrGeneratorInputProcessor(new OkrGenerator(kernel, kernelFunctions["okrtitle"])))
             .WithJsonl(fileName)
             .Run();
 

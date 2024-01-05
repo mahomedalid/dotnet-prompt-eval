@@ -1,0 +1,1 @@
+Generate an objective title in the style of a OKR that is measurable and highlights the impact for {{$Input}}
